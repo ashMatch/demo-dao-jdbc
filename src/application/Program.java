@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -24,7 +26,8 @@ public class Program extends RuntimeException{
 		Seller sl = new Seller(2345, "Sueli Montana", "sueli@gmail.com", new java.sql.Date(date.getTime()),3000.0, dp);
 		
 		System.out.println(sl);
-
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 	}
 
 }
