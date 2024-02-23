@@ -57,6 +57,12 @@ public class Program {
 		
 		System.out.println("Inserido!! novo id = " + newSeller.getId());
 	
+		
+		System.out.println("\n=== TEST n3: seller findAll ===");
+		seller = sellerDao.findById(1);
+		seller.setName("Marta Blue");
+		sellerDao.update(seller);
+		System.out.println("ATUALIZAÇÃO FEITA!!");
 	}
 
 }
