@@ -53,7 +53,7 @@ public class Program {
 			System.out.println(sel);
 		}
 	
-		System.out.println("\n=== TEST n4: seller findAll ===");
+		System.out.println("\n=== TEST n4: seller insert ===");
 		Seller newSeller = new Seller(null, "Greg Salmon", "greg@gmail.com", new Date(), 4000.0, department);
 		
 		sellerDao.insert(newSeller);
@@ -61,7 +61,7 @@ public class Program {
 		System.out.println("Inserido!! novo id = " + newSeller.getId());
 	
 		
-		System.out.println("\n=== TEST n5: seller findAll ===");
+		System.out.println("\n=== TEST n5: seller update ===");
 		seller = sellerDao.findById(1);
 		seller.setName("Marta Blue");
 		sellerDao.update(seller);
@@ -69,7 +69,7 @@ public class Program {
 		
 		
 		
-		System.out.println("\n=== TEST n6: seller findAll ===");
+		System.out.println("\n=== TEST n6: seller delete ===");
 		System.out.println("Entre com o id para teste  de remoção.");
 		int id = sc.nextInt();
 		sellerDao.deleteById(id);
